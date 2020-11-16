@@ -1,0 +1,7 @@
+<mat-list>
+  <mat-list-item *ngFor="let profile of users">
+    <img matListAvatar src="{{profile.avatar_url}}" alt="...">
+    <h3 matLine> {{profile.type}} </h3>
+   
+  </mat-list-item>
+</mat-list>
