@@ -1,27 +1,35 @@
-<div style="margin-top: 50px;">
-<div class="topButton">
-  <button (click)="clicked()" mat-raised-button color="accent">
-    Load Tabs
-  </button>
-</div>
-  <div>
-    <mat-chip-list>
-    </mat-chip-list>
+ <div>
+  <div class="topButton">
+    <button (click)="clicked()" mat-raised-button color="warn">
+      Load Tabs
+    </button>
   </div>
+  <div class="container">
+    <div class="left_panel">
+    <ul *ngFor="let item of users">
+      <li>{{item.url}}</li>
+    </ul>
+    </div>
+    <div class="right_panel">
+      <app-list></app-list>
+    </div>
+</div>
 
-  <div>
-    <app-list
-      *ngIf="visible; else other_content"
-      (newItemEvent)="exito($event)"
-    >
-      {{ title }}"</app-list
-    >
-    <ng-template #other_content>
-    </ng-template>
-  </div>
-  <div id="separator">
-    <h1 style="text-align: center;">Users</h1>
-  </div>
-  <app-profile></app-profile>
-  <router-outlet></router-outlet>
+<div style="height: 20px;border: 2px solid;margin: 100px 40px;width: auto;">
+  <mat-slide-toggle (change)="toggleColor()">Change footer color!</mat-slide-toggle>
 </div>
+
+
+<app-footer [colorcito]="footerColor"></app-footer>
+
+<!-- <div id="separator">
+  <h1 style="text-align: center;">Users</h1>
+</div> -->
+
+<!-- <div class="foot">
+  <app-footer></app-footer>
+</div> -->
+  <!-- <router-outlet></router-outlet> -->
+
+ </div>
+

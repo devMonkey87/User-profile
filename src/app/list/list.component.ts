@@ -1,5 +1,5 @@
 import { GithubService } from './../services/github.service';
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output, ViewChildren, ElementRef, QueryList } from '@angular/core';
 import { User } from '../interfaces/interfaces';
 
 @Component({
@@ -10,6 +10,8 @@ import { User } from '../interfaces/interfaces';
 export class ListComponent implements OnInit {
   @Input() name: string;
   @Output() newItemEvent = new EventEmitter<string>();
+
+  // @ViewChildren(HTMLElement) pictures: QueryList<HTMLElement>;
 
   users: User[];
   nombre: string;

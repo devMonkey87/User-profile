@@ -1,0 +1,19 @@
+<ng-container *ngIf="turnOn; else visible">
+  <mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile>
+      <button mat-menu-item #maemia>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-grid-tile>
+    <mat-grid-tile>2</mat-grid-tile>
+  </mat-grid-list>
+</ng-container>
+
+<ng-template #visible>
+  hay {{ turnOn }}
+  <button mat-menu-item (click)="changeColor()"  >Change style</button>
+  <nav *ngFor="let i of arrayccito" [ngClass]="{ test1: variable === true, test2: variable === false && i === 3 }">
+    Element
+  </nav>
+</ng-template>
+
+

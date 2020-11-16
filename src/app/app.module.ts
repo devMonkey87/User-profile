@@ -15,6 +15,17 @@ import { HttpClient } from '@angular/common/http/public_api';
 import {HttpClientModule} from '@angular/common/http';
 import { ProfileComponent } from './profile/profile.component';
 import {MatListModule} from '@angular/material/list';
+import { AboutComponent } from './about/about.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
+import { LeftPanelComponent } from './left-panel/left-panel.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+
+
+
 
 
 
@@ -28,7 +39,12 @@ import {MatListModule} from '@angular/material/list';
     AppComponent,
     TableComponent,
     ListComponent,
-    ProfileComponent
+    ProfileComponent,
+    AboutComponent,
+    FooterComponent,
+    HeaderComponent,
+    LeftPanelComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +56,10 @@ import {MatListModule} from '@angular/material/list';
     MatTabsModule,
     MatButtonModule,
     HttpClientModule,
-    MatListModule
+    MatListModule,
+    MatGridListModule,
+    MatMenuModule,
+    MatSlideToggleModule
   ],
   providers: [GithubService],
   bootstrap: [AppComponent]

@@ -6,8 +6,8 @@
   <mat-tab label="Tabla"><app-table></app-table></mat-tab>
   <mat-tab label="Second"> Content 2 </mat-tab>
   <mat-tab label="Profiles">
-    <ul *ngFor="let item of users">
-      <li><img src="{{ item.avatar_url }}" alt="" /></li>
-    </ul>
+    <div *ngFor="let item of users">
+      <img id="profilePic" src="{{ item.avatar_url }}" alt=""/>
+    </div>
   </mat-tab>
 </mat-tab-group>

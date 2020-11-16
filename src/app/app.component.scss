@@ -1,11 +1,38 @@
 .topButton {
-    float: right;
     margin-right: 20px;
-    background-color: red;
+    display: block;
+    margin: 20px 0px 20px 850px;
 }
 
 #separator{
-    margin-top: 500px;
     line-height: 30px;
-    background-color: greenyellow
+    background-color: greenyellow;
+    width: 100%;
+}
+.left_panel {
+    width: 20%;
+    height: 100%;
+    background-color:greenyellow;
+}
+
+.right_panel {
+    float: right;
+    background-color:purple;
+    width: 100%;
+}
+
+.foot {
+    margin-bottom: 0px;
+}
+.container {
+    display: flex;
+    
+}
+
+.test1 {
+background-color:yellow;
+}
+
+.test2 {
+    background-color:red
 }
